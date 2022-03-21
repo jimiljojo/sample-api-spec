@@ -5,12 +5,7 @@ pipeline {
         CATALOG_DESCRIPTOR = './descriptor.yaml' 
      }
      stages {
-        stage('git checkout') {
-            steps {
-                git url: 'git@github.com:jimiljojo/sample-api-spec.git'
-                // additional checkout tasks
-            }
-        }
+    
         stage('API Cataloging') {
             steps {
                  withCredentials([
