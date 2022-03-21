@@ -9,3 +9,4 @@ The connector supports:
 -   Inbound and outbound Remote Function Call (RFC) communication through Intermediate Document (IDoc) or Business Application Programming Interface (BAPI).
 -   Synchronous, transactional, and queued RFC (sRfc, tRfc, qRfc protocols).
 -   Client connection pooling.
+- GTP demo
