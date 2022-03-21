@@ -1,0 +1,4 @@
+#%Catalog Descriptor 0.6
+apis:
+  - spec: american.raml
+    assetId: american
