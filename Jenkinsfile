@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        ANYPOINT_ORG_ID = 'a770f35c-9d92-4584-afb0-3c594219101b'
+        ANYPOINT_ORG_ID = 'ac6d936c-c476-4e60-8007-d00a4f2bff8c'
         CATALOG_DESCRIPTOR = './descriptor.yaml' 
      }
      stages {
@@ -13,7 +13,7 @@ pipeline {
                     usernameVariable: 'ANYPOINT_USERNAME',
                     passwordVariable: 'ANYPOINT_PASSWORD')
                 ]) {
-                    sh 'api-catalog publish-asset -d $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://qax.anypoint.mulesoft.com --trigger=branch:master' 
+                    sh 'api-catalog publish-asset -d $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://anypoint.mulesoft.com --trigger=branch:master' 
                 }
             }
         }
