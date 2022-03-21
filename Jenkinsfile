@@ -13,7 +13,7 @@ pipeline {
                     usernameVariable: 'ANYPOINT_USERNAME',
                     passwordVariable: 'ANYPOINT_PASSWORD')
                 ]) {
-                    sh 'api-catalog publish-asset -d $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://qax.anypoint.mulesoft.com/ --trigger=branch:master' 
+                    sh 'api-catalog publish-asset -d $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://qax.anypoint.mulesoft.com --trigger=branch:master' 
                 }
             }
         }
