@@ -25,5 +25,10 @@ jobs:
           sudo apt-get update
           npm install -g api-catalog-cli@beta      
       - name: Publish API
+        env: 
+          ANYPOINT_USERNAME: ${{ secrets.ANYPOINT_USERNAME }} 
+          ANYPOINT_PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
+          CATALOG_DESCRIPTOR: './descriptor.yaml' 
+          ANYPOINT_ORG_ID: 'ac6d936c-c476-4e60-8007-d00a4f2bff8c'
         run: |
-          api-catalog publish-asset -d $CATALOG_DESCRIPTOR -o $ANYPOINT_ORG_ID -a https://anypoint.mulesoft.com --trigger=branch:master
+          api-catalog publish-asset -d $CATALOG_DESCRIPTOR -o "$ANYPOINT_ORG_ID" -a https://anypoint.mulesoft.com --trigger=branch:master -u "$ANYPOINT_USERNAME" -p "$ANYPOINT_PASSWORD"
