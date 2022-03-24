@@ -2,6 +2,6 @@
 apis:
   - spec: american.raml
     assetId: american
-    apiVersion: 3.0.0
+    apiVersion: 0.0.2
     docs:
       home: home.md
